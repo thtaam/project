@@ -126,9 +126,9 @@ function addProductToCart(productImg, productName, productPrice) {
     var quantity = cartItems.getElementsByTagName('input')[0]?.value
     for (var i = 0; i < cartItemsNames.length; i++) {
         if (cartItemsNames[i].innerText == productName) {
-            alert("You have already add this item to cart");
+            // alert("You have already add this item to cart");
             // todo : quantity ++
-            cartItems.getElementsByTagName('input')[0]?.value = ++quantity
+            cartItems.getElementsByTagName('input')[0].value =  Number(quantity) + 1  
             return;
         }
     }
